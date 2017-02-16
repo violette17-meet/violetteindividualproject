@@ -3,8 +3,12 @@ from sqlalchemy import Column , Integer , String , DateTime , ForeignKey , Float
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, sessionmaker
 from sqlalchemy import create_engine , func , DateTime
+from sqlalchemy import Column,Integer,String,DateTime, ForeignKey, Float
+from sqlalchemy.ext.declarative import declarative_base
+
 
 Base = declarative_base()
+
 
 #class User(Base_)
 #	__tablename__='user'
@@ -25,10 +29,10 @@ class Makeup(Base):
 
 
 
+
+
 engine=create_engine('sqlite:///forum.db')
 Base.metadata.create_all(engine)
 Base.metadata.bind= engine
 DBsession =sessionmaker(bind=engine,autoflush=False)
 session =DBsession()
-
-

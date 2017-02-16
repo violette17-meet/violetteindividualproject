@@ -1,33 +1,28 @@
+<!DOCTYPE html>
 <html>
-<head>
+<head><title>Makeupedia</title></head>
+<body>
 <h1>
 logo</h1>
-</head>
-<body>
-eyeliner
-https://www.youtube.com/watch?v=l55V-PAxkIE
+
+<!-- <eyeliner<!
+<https://www.youtube.com/watch?v=l55V-PAxkIE
 <img scr="https://i.ytimg.com/vi/Y2d8iSl9xjs/maxresdefault.jpg", height="200"><br>
 eyeshadow
 https://www.youtube.com/watch?v=W4W-4VL1ABU
 <img src="https://s-media-cache-ak0.pinimg.com/736x/8e/2b/54/8e2b5463e77ec9b9361635d7e6a2bf25.jpg", height="200"><br>
 makeup essentials 
 https://www.youtube.com/watch?v=zWjL9EqwKk4
-<img src="https://static1.squarespace.com/static/54216a52e4b0be37af690f55/t/562a6237e4b0b1b4cb88582b/1445618232759/Tora+Photography+-+Product+Photography+Montreal+-+Makeup+Products+Layout?format=750w"><br>
-essential tools
-
+<img src="https://static1.squarespace.com/static/54216a52e4b0be37af690f55/t/562a6237e4b0b1b4cb88582b/1445618232759/Tora+Photography+-+Product+Photography+Montreal+-+Makeup+Products+Layout?format=750w"><br> -->
 
 {%for makeup in makeups%}
-
-<div class= "hi">
-
+<a href = "{{url_for('makeup_item', item_id = makeup.id)}}""> <div class= "hi">
 <p>{{makeup.name}}</p>
-
-	
-
-
-</div>
-
-
+<p>{{makeup.company}}</p>
+<p>{{makeup.description}}</p>
+<p>{{makeup.website}}</p>
+<img src = {{makeup.picture}}>
+</div></a>
 {%endfor%}
 
 </body>
@@ -39,3 +34,4 @@ essential tools
 
 
 </html>
+
